@@ -5,7 +5,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "nodemon src/server.ts"
+		"dev": "nodemon src/server.ts",
+		"dev:test": "npx dotenv -e .env.test nodemon src/server.ts"
 	},
 	"keywords": [],
 	"author": "",
