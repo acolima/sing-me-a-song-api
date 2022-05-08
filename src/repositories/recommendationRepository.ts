@@ -69,16 +69,6 @@ async function remove(id: number) {
 	})
 }
 
-async function createTestRecommendation() {
-	await prisma.recommendation.create({
-		data: {
-			name: 'As It Was - Harry Styles',
-			youtubeLink: 'https://www.youtube.com/watch?v=H5v3kku4y6Q',
-			score: 0,
-		},
-	})
-}
-
 async function truncate() {
 	await prisma.$executeRaw`TRUNCATE TABLE recommendations`
 }
@@ -91,6 +81,5 @@ export const recommendationRepository = {
 	updateScore,
 	getAmountByScore,
 	remove,
-	createTestRecommendation,
 	truncate,
 }
