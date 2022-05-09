@@ -1,8 +1,8 @@
 import supertest from 'supertest'
 import app from '../../src/app.js'
-import { multipleRecommendationsFactory } from './factories/multipleRecommendationsFactory.js'
-import { recommendationBodyFactory } from './factories/recommendationBodyFactory.js'
-import { recommendationFactory } from './factories/recommendationFactory.js'
+import { multipleRecommendationsFactory } from '../factories/multipleRecommendationsFactory.js'
+import { recommendationBodyFactory } from '../factories/recommendationBodyFactory.js'
+import { recommendationFactory } from '../factories/recommendationFactory.js'
 import {
 	disconnect,
 	findRecommendationById,
@@ -35,7 +35,7 @@ describe('Recommendations', () => {
 			const result = await supertest(app).get('/recommendations')
 
 			expect(result.status).toEqual(200)
-			expect(result.body.length).toEqual(10)
+			expect(result.body.length).toBeLessThanOrEqual(10)
 		})
 	})
 

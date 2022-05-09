@@ -93,6 +93,8 @@ export const recommendationService = {
 	getRandom,
 	get,
 	getById: getByIdOrFail,
+	getByScore,
+	getScoreFilter,
 	getTop,
 	truncate,
 }
