@@ -1,12 +1,12 @@
 # Sing me a Song API
 
-Sing me a Song is a application for videos recommendations. The recommendation is given based on their score.
+API for Sing me a Song, a application for videos recommendations. The recommendation is given based on their score.
 
 ## Implemented features
 
 - Add a new music recommendation
 - Like or dislike (up or down vote)
-- Get a list with the videos with the hightest scores
+- Get a list of the videos with the hightest scores
 - Get a random video recommendation
 
 ## Technologies
@@ -30,66 +30,70 @@ Sing me a Song is a application for videos recommendations. The recommendation i
 
 1. Clone this repository
 
-```bash
+```
 git clone git@github.com:acolima/sing-me-a-song-api.git
 ```
 
 2. Go to the project directory
 
-```bash
- cd sing-me-a-song-api
+```
+cd sing-me-a-song-api
 ```
 
 3. Install dependencies
 
-```bash
+```
 npm i
 ```
 
-4. Create a `.env` file with the same structure of `.env.example` and change the values of `DATABASE_URL`
+4. Create a `.env` file with the same structure of `.env.example` and change the value of `DATABASE_URL`
 
-```bash
+```
 DATABASE_URL=
-NODE_ENV=developement
 ```
 
-5. Create the database 
-```bash 
+5. Create the database
+
+```
 npx prisma migrate dev
 ```
 
 6. Run project with
 
-```bash
+```
 npm run dev
 ```
 
-7. You can check the front-end repository of this project at https://github.com/acolima/sing-me-a-song and follow the instructions to run
+:star: You can check the front-end repository of this project <a href='https://github.com/acolima/sing-me-a-song'>here</a> and follow the instructions to run
 
 ## How to run the tests
-1. Create a `.env.test` file with the same structure of `.env.example` and change the values of `DATABASE_URL`
 
-```bash
+1. Create a `.env.test` file with the same structure of `.env.example` and change the value of `DATABASE_URL`
+
+```
 DATABASE_URL=
-NODE_ENV=test
 ```
 
-2. Create the tests database 
-```bash 
+2. Create the tests database
+
+```
 npx dotenv -e .env.test prisma migrate dev
 ```
 
 3. Run project with
+
 ```bash
 npm run dev:test
 ```
 
-4. Run tests with
-```bash
+4. Run tests
+
+```
 npm run test
 ```
 
-5. Run coverage tests with
-```bash
+5. Run coverage tests
+
+```
 npm run test:coverage
 ```
